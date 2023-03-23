@@ -6,6 +6,9 @@ from route import rota_ekle
 app = Flask(__name__)
 api = Api(app)
 
+# Yeni Bir Controller / Rota ikilisi ekleneceği zaman controllers.py içerisinde önce controller yapıyı hazırla
+# daha sonra aşağıda Rotalar kısmında rota_ekle ile ekle
+
 #### Rotalar
 
 rota_ekle(api, MyController, '/deneme')
