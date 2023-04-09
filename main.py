@@ -8,14 +8,21 @@ api = Api(app)
 #### Rotalar
 
 api.add_resource(
-        OgrenciController, 
-        '/ogrenci/getir',# Tüm Kayıtları Getir
-        '/ogrenci/getir/<int:id>',# Sadece İlgili Kayıt
-        '/ogrenci/ekle/<string:isim>/<int:yas>',# Kayıt Ekle
-        '/ogrenci/guncelle/<int:id>/<string:isim>/<int:yas>', #Kayıt Güncelleme
-        '/ogrenci/sil/<int:id>',# kayıt sil
-    )
-
+    OgrenciController, 
+    '/ogrenci/getir',# Tüm Kayıtları Getir
+    '/ogrenci/getir/<int:id>',# Sadece İlgili Kayıt
+    '/ogrenci/ekle/<string:isim>/<int:yas>',# Kayıt Ekle
+    '/ogrenci/guncelle/<int:id>/<string:isim>/<int:yas>', #Kayıt Güncelleme
+    '/ogrenci/sil/<int:id>',# kayıt sil
+)
+api.add_resource(
+    ResimController,
+    '/resim/<string:resim>'
+)
+api.add_resource(
+    DenemeController,
+    '/deneme'
+)
 #### Rotalar
 
 if __name__ == '__main__':
