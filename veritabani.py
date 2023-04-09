@@ -2,12 +2,15 @@ import sqlite3
 
 db = sqlite3.connect('ogrenci.db')
 imlec = db.cursor()
+
 def tabloOlustur():
     imlec.execute("""CREATE TABLE IF NOT EXISTS ogrenciler (
         id INTEGER PRIMARY KEY NOT NULL, 
         isim VARCHAR(50) NOT NULL, 
-        yas INTEGER NOT NULL
+        yas INTEGER NOT NULL,
+        resim VARCHAR(1000)
     )""")
+tabloOlustur()
 
 def ogrenciOlustur(isim, yas):
     imlec.execute("insert into ogrenciler (isim, yas) values(?,?)",(isim, yas))
