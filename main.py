@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_restful import Resource, Api
-from controllers import *
-from route import rota_ekle
+from kontroller import *
+from rotaFonksiyonu import rota_ekle
 
 app = Flask(__name__)
 api = Api(app)
