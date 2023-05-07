@@ -10,7 +10,6 @@ class DenemeController(Resource):
             print('yok')
         pass
         # resim = request.files['resim']
-        # resim.filename='yarrak.png'
         # resim.save(os.path.join('uploads', resim.filename))     
 class ResimController(Resource):
     def get(self,resim):
